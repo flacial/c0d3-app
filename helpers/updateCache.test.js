@@ -1,14 +1,10 @@
 import { updateCache } from './updateCache'
 import { InMemoryCache } from '@apollo/client'
-import GET_SUBMISSIONS from '../graphql/queries/getSubmissions'
-import GET_APP from '../graphql/queries/getApp'
 import GET_PREVIOUS_SUBMISSIONS from '../graphql/queries/getPreviousSubmissions'
-import dummySessionData from '../__dummy__/sessionData'
-import dummyLessonData from '../__dummy__/lessonData'
-import dummyAlertData from '../__dummy__/alertData'
 import { SubmissionStatus } from '../graphql'
 
 const submission = {
+  __typename: 'Submission',
   id: 0,
   status: SubmissionStatus.Open,
   mrUrl: '',
@@ -23,9 +19,10 @@ const submission = {
     name: 'fake student',
     email: 'fake@fakemail.com',
     id: 1,
-    isAdmin: false
+    __typename: 'User'
   },
   challenge: {
+    __typename: 'Challenge',
     id: 23,
     title: 'fake challenge',
     description: 'fake description',
@@ -33,6 +30,7 @@ const submission = {
     order: 1
   },
   reviewer: {
+    __typename: 'Reviewer',
     id: 1,
     username: 'fake reviewer',
     name: 'fake reviewer',
@@ -51,16 +49,20 @@ const submission = {
       line: 22,
       fileName: 'js7/1.js',
       author: {
-        username: 'fake reviewer',
-        name: 'fake reviewer'
-      }
+        username: 'fake author',
+        name: 'fake name',
+        __typename: 'Author'
+      },
+      __typename: 'Comment'
     }
-  ]
+  ],
+  createdAt: '1524401718267',
+  updatedAt: '1524401718267'
 }
 const submissionsData = [submission, { ...submission, id: 1 }]
 describe('updateCache helper', () => {
   it('should update previous submissions in cache', () => {
-    const cache = new InMemoryCache({ addTypename: false })
+    const cache = new InMemoryCache()
     cache.writeQuery({
       query: GET_PREVIOUS_SUBMISSIONS,
       variables: { userId: 1, challengeId: 23 },
@@ -131,12 +133,6 @@ describe('updateCache helper', () => {
       userId: 1
     })(cache)
 
-    const newCache = cache.readQuery({
-      query: GET_PREVIOUS_SUBMISSIONS,
-      variables: { userId: 1, challengeId: 23 },
-      data: { getPreviousSubmissions: submissionsData }
-    })
-
-    expect(newCache.getPreviousSubmissions[0].comments.length).toEqual(0)
+    expect(cache.extract()['Submission:0'].comments.length).toEqual(1)
   })
 })
