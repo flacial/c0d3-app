@@ -18,6 +18,7 @@ import { useRouter } from 'next/router'
 import expectLoading from '../../utils/expectLoading'
 import getPreviousSubmissions from '../../../__dummy__/getPreviousSubmissionsData'
 import GET_PREVIOUS_SUBMISSIONS from '../../../graphql/queries/getPreviousSubmissions'
+import { SubmissionStatus } from '../../../graphql'
 
 const getAppMock = {
   request: { query: GET_APP },
@@ -44,11 +45,13 @@ const getSubmissionsMock = {
     data: {
       submissions: [
         {
+          __typename: 'Submission',
           id: 1,
           status: 'open',
           diff: 'diff --git a/js7/1.js b/js7/1.js\nindex 9c96b34..853bddf 100644\n--- a/js7/1.js\n+++ b/js7/1.js\n@@ -1,8 +1,19 @@\n-// write your code here!\n const solution = () => {\n-  // global clear all timeout:\n+  const allT = [];\n+  const old = setTimeout;\n+  window.setTimeout = (func, delay) => {\n+    const realTimeout = old(func, delay);\n+    allT.push(realTimeout);\n+    return realTimeout;\n+  };\n+  window.clearAllTimouts = () => {\n+    while (allT.length) {\n+      clearTimeout(allT.pop());\n+    }\n+  };\n   cat = () => {\n-  }\n+    window.clearAllTimouts();\n+  };\n };\n \n module.exports = solution;\n',
           comment: 'TEST 2',
           challenge: {
+            __typename: 'Challenge',
             title: 'Sum of 2 Numbers',
             description:
               "Write a function that takes in 2 numbers and returns their sum. Here's how another developer might use your function: solution(5,9) // Should return 14 solution(4,1) // Should return 5"
@@ -60,13 +63,30 @@ const getSubmissionsMock = {
             username: 'newbie'
           },
           reviewer: {
-            id: '0',
-            username: 'admin',
-            name: 'Admin Admin'
+            __typename: 'Reviewer',
+            id: 1,
+            username: 'fake reviewer',
+            name: 'fake reviewer'
           },
-          createdAt: '',
-          updatedAt: '',
-          comments: null
+          comments: [
+            {
+              id: 1,
+              content: 'Some comment',
+              submissionId: 1,
+              createdAt: '1524401718267',
+              authorId: 1,
+              line: 24,
+              fileName: 'Some line',
+              author: {
+                username: 'fake author',
+                name: 'fake name',
+                __typename: 'Author'
+              },
+              __typename: 'Comment'
+            }
+          ],
+          createdAt: '1524401718267',
+          updatedAt: '1524401718267'
         }
       ]
     }
