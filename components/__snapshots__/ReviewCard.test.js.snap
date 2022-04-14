@@ -143,17 +143,21 @@ exports[`ReviewCard Component Should be able to add comment 1`] = `
                 class="css-1p5fn6o-diff-container"
               >
                 <tbody>
-                  <tr>
+                  <tr
+                    class="css-1avirs2-title-block"
+                  >
                     <td
-                      class="css-1gyvngn-title-block"
                       colspan="4"
                     >
                       <pre
-                        class="css-pa3tg-content-text"
+                        class="css-1ent2ve-right-title"
                       >
                         js0/1.js
                       </pre>
                     </td>
+                    <td
+                      class="css-1urt2zp-toolbar"
+                    />
                   </tr>
                   <tr
                     class="css-1n7ec1i-line"
@@ -996,17 +1000,21 @@ exports[`ReviewCard Component Should be able to select previous submissions 1`] 
                 class="css-1p5fn6o-diff-container"
               >
                 <tbody>
-                  <tr>
+                  <tr
+                    class="css-1avirs2-title-block"
+                  >
                     <td
-                      class="css-1gyvngn-title-block"
                       colspan="4"
                     >
                       <pre
-                        class="css-pa3tg-content-text"
+                        class="css-1ent2ve-right-title"
                       >
                         js0/1.js
                       </pre>
                     </td>
+                    <td
+                      class="css-1urt2zp-toolbar"
+                    />
                   </tr>
                   <tr
                     class="css-1n7ec1i-line"
@@ -1798,17 +1806,21 @@ exports[`ReviewCard Component Should not be able to add comment when comment val
                 class="css-1p5fn6o-diff-container"
               >
                 <tbody>
-                  <tr>
+                  <tr
+                    class="css-1avirs2-title-block"
+                  >
                     <td
-                      class="css-1gyvngn-title-block"
                       colspan="4"
                     >
                       <pre
-                        class="css-pa3tg-content-text"
+                        class="css-1ent2ve-right-title"
                       >
                         js0/1.js
                       </pre>
                     </td>
+                    <td
+                      class="css-1urt2zp-toolbar"
+                    />
                   </tr>
                   <tr
                     class="css-1n7ec1i-line"
@@ -2600,17 +2612,21 @@ exports[`ReviewCard Component Should render incomplete diff 1`] = `
                 class="css-1p5fn6o-diff-container"
               >
                 <tbody>
-                  <tr>
+                  <tr
+                    class="css-1avirs2-title-block"
+                  >
                     <td
-                      class="css-1gyvngn-title-block"
                       colspan="4"
                     >
                       <pre
-                        class="css-pa3tg-content-text"
+                        class="css-1ent2ve-right-title"
                       >
                         .
                       </pre>
                     </td>
+                    <td
+                      class="css-1urt2zp-toolbar"
+                    />
                   </tr>
                   <tr
                     class="css-1n7ec1i-line"
@@ -4203,17 +4219,21 @@ exports[`ReviewCard Component Should render incorrect diff 1`] = `
                 class="css-1p5fn6o-diff-container"
               >
                 <tbody>
-                  <tr>
+                  <tr
+                    class="css-1avirs2-title-block"
+                  >
                     <td
-                      class="css-1gyvngn-title-block"
                       colspan="4"
                     >
                       <pre
-                        class="css-pa3tg-content-text"
+                        class="css-1ent2ve-right-title"
                       >
                         js7/1
                       </pre>
                     </td>
+                    <td
+                      class="css-1urt2zp-toolbar"
+                    />
                   </tr>
                   <tr
                     class="css-1n7ec1i-line"
@@ -6181,17 +6201,21 @@ exports[`ReviewCard Component Should render submissions in other languages 1`] =
                 class="css-1p5fn6o-diff-container"
               >
                 <tbody>
-                  <tr>
+                  <tr
+                    class="css-1avirs2-title-block"
+                  >
                     <td
-                      class="css-1gyvngn-title-block"
                       colspan="4"
                     >
                       <pre
-                        class="css-pa3tg-content-text"
+                        class="css-1ent2ve-right-title"
                       >
                         js7/1.c
                       </pre>
                     </td>
+                    <td
+                      class="css-1urt2zp-toolbar"
+                    />
                   </tr>
                   <tr
                     class="css-1n7ec1i-line"

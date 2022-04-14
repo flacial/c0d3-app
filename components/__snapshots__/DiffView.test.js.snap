@@ -55,17 +55,21 @@ exports[`DiffView component Should add comment box 1`] = `
         class="css-1p5fn6o-diff-container"
       >
         <tbody>
-          <tr>
+          <tr
+            class="css-1avirs2-title-block"
+          >
             <td
-              class="css-1gyvngn-title-block"
               colspan="4"
             >
               <pre
-                class="css-pa3tg-content-text"
+                class="css-1ent2ve-right-title"
               >
                 js0/1.js
               </pre>
             </td>
+            <td
+              class="css-1urt2zp-toolbar"
+            />
           </tr>
           <tr
             class="css-1n7ec1i-line"
@@ -708,17 +712,21 @@ exports[`DiffView component Should render collapsed diff 1`] = `
         class="css-1p5fn6o-diff-container"
       >
         <tbody>
-          <tr>
+          <tr
+            class="css-7s9gcw-title-block"
+          >
             <td
-              class="css-dfkv5k-title-block"
               colspan="4"
             >
               <pre
-                class="css-pa3tg-content-text"
+                class="css-1ent2ve-right-title"
               >
                 js0/1.js
               </pre>
             </td>
+            <td
+              class="css-1urt2zp-toolbar"
+            />
           </tr>
         </tbody>
       </table>
@@ -782,17 +790,21 @@ exports[`DiffView component Should render diff with comments 1`] = `
         class="css-1p5fn6o-diff-container"
       >
         <tbody>
-          <tr>
+          <tr
+            class="css-1avirs2-title-block"
+          >
             <td
-              class="css-1gyvngn-title-block"
               colspan="4"
             >
               <pre
-                class="css-pa3tg-content-text"
+                class="css-1ent2ve-right-title"
               >
                 foobar.js
               </pre>
             </td>
+            <td
+              class="css-1urt2zp-toolbar"
+            />
           </tr>
           <tr
             class="css-1n7ec1i-line"
@@ -2972,17 +2984,21 @@ exports[`DiffView component Should render diff with comments 1`] = `
         class="css-1p5fn6o-diff-container"
       >
         <tbody>
-          <tr>
+          <tr
+            class="css-1avirs2-title-block"
+          >
             <td
-              class="css-1gyvngn-title-block"
               colspan="4"
             >
               <pre
-                class="css-pa3tg-content-text"
+                class="css-1ent2ve-right-title"
               >
                 js7/10.js
               </pre>
             </td>
+            <td
+              class="css-1urt2zp-toolbar"
+            />
           </tr>
           <tr
             class="css-1n7ec1i-line"
