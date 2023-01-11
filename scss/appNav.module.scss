@@ -30,6 +30,7 @@
   padding: 5px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
+
   &:hover,
   &:focus {
     background-color: color.change(variables.$primary, $lightness: 90%);
@@ -41,18 +42,21 @@
 .nav-buttons {
   flex-shrink: 0;
   text-transform: uppercase;
+
   & > * {
     font-weight: 700;
     text-decoration: none;
     min-width: 5em;
     color: variables.$secondary;
   }
+
   margin-block: 14px;
 }
 
 .nav-link {
   color: #565656;
   font-weight: 700;
+
   &:hover,
   &:focus {
     background-color: color.change(variables.$primary, $lightness: 90%);
@@ -64,6 +68,8 @@
 .login-btn {
   background-color: variables.$secondary;
   color: variables.$primary;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
   &:hover,
   &:focus {
     background-color: color.change(variables.$primary, $lightness: 90%);
@@ -73,6 +79,8 @@
 
 .signup-btn {
   background-color: variables.$primary;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
   &:hover,
   &:focus {
     background-color: color.change(variables.$primary, $lightness: 90%);
@@ -84,6 +92,7 @@
   margin: 8px;
   padding: 10.2px 13.6px;
   border-radius: 0.375rem;
+
   &:hover,
   &:focus {
     border: 1px solid variables.$primary;
