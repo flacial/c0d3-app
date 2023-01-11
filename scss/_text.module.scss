@@ -27,7 +27,8 @@ h6 {
   @include rubik-bold;
 }
 
-p {
+p,
+li {
   font-family: 'Inter';
   font-weight: 400;
   line-height: 160%;
