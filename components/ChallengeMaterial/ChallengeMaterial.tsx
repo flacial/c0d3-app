@@ -30,6 +30,7 @@ import { SelectIteration } from '../SelectIteration'
 import Error, { StatusCode } from '../Error'
 import { ReviewStatus } from '../ReviewStatus'
 import useBreakpoint from '../../helpers/useBreakpoint'
+import MDXcomponents from '../../helpers/mdxComponents'
 dayjs.extend(relativeTime)
 dayjs.extend(LocalizedFormat)
 
@@ -251,9 +252,27 @@ export const ChallengeQuestionCard: React.FC<ChallengeQuestionCardProps> = ({
           </h1>
           <div
             data-testid="challenge-question-description"
-            className="bg-light p-3 mt-3"
+            className="pt-3 pb-3 mt-3"
           >
-            <Markdown>{currentChallenge.description}</Markdown>
+            <Markdown
+              options={{
+                overrides: {
+                  pre: props => {
+                    return (
+                      <MDXcomponents.code className="jsx">
+                        {props.children.props.children[
+                          props.children.props.children.length - 1
+                        ] !== ''
+                          ? props.children.props.children + '\n'
+                          : props.children.props.children}
+                      </MDXcomponents.code>
+                    )
+                  }
+                }
+              }}
+            >
+              {currentChallenge.description}
+            </Markdown>
           </div>
         </div>
       </div>
