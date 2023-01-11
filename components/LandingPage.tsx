@@ -25,7 +25,7 @@ const LandingPage: React.FC = () => {
         </div>
         <div className="row justify-center mt-4">
           <div className="col-md-10 offset-md-1">
-            <p style={{ lineHeight: 1.5 }} className="fw-light h4">
+            <p style={{ lineHeight: 1.5 }} className="fs-4">
               Learn the right foundations you need to become a full stack
               software engineer. Our curriculum takes no shortcuts and
               effectively trains students with no technical background to become
@@ -49,7 +49,7 @@ const LandingPage: React.FC = () => {
         </div>
         <div className="row mt-5">
           <div className="col-md-10 offset-md-1">
-            <p className="fw-light h4" style={{ lineHeight: 1.5 }}>
+            <p className="fs-4" style={{ lineHeight: 1.5 }}>
               Our learning process is interactive and follows the same practice
               as a well functioning engineering team. From the first line of
               code you write, you will be code reviewed by engineers to ensure
@@ -116,7 +116,7 @@ const LandingPage: React.FC = () => {
             Your Learning Journey
           </h1>
           <p
-            className="mt-5 fw-light col-md-8 offset-md-2 pb-5 text-center h4"
+            className="mt-5 fs-4 col-md-8 offset-md-2 pb-5 text-center"
             style={{ lineHeight: 1.5 }}
           >
             Our learning process is interactive and follows the same practice as
@@ -225,7 +225,7 @@ const LandingPage: React.FC = () => {
       <div className="container mt-5 py-5 text-center">
         <h1 className="display-4 fw-bold">Start Your Journey</h1>
         <p
-          className="mt-3 fw-light"
+          className="mt-3 fs-4"
           style={{ lineHeight: 1.5, fontSize: '1.5rem' }}
         >
           Become a full stack software engineer - 100% Free!
