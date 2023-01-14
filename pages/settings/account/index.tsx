@@ -181,7 +181,14 @@ const PasswordSettings = () => {
 }
 
 const AccountSettings = () => {
-  const { data, loading } = useGetAppQuery()
+  // if the user isn't logged in and gets redirected to this page
+  // after login, getAppQuery will get the session data from the cache
+  // and it'll be empty, so it renders the inputs unfilled
+  // to fix it, the fetchPolicy is cache-and-network
+  const { data, loading } = useGetAppQuery({
+    fetchPolicy: 'cache-and-network',
+    nextFetchPolicy: 'cache-first'
+  })
   const { username, name } = data?.session.user || {}
 
   if (loading || !data) {
